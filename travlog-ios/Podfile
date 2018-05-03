@@ -9,4 +9,6 @@ target 'travlog-ios' do
 
   pod 'Alamofire', '~> 4.7'
   pod 'MaterialComponents'
+  pod 'Fabric'
+  pod 'Crashlytics'
 end

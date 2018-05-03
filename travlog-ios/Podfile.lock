@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.7.2)
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
+  - Fabric (1.7.6)
   - MaterialComponents (54.12.0):
     - MaterialComponents/ActivityIndicator (= 54.12.0)
     - MaterialComponents/ActivityIndicator+Extensions (= 54.12.0)
@@ -470,10 +473,14 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - Crashlytics
+  - Fabric
   - MaterialComponents
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
   MaterialComponents: 9cc85f4fea3adb8b2323094a8baf7a444ad382a1
   MDFInternationalization: e355b0cebecf53d60233bd267084e49366c82513
   MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
@@ -481,6 +488,6 @@ SPEC CHECKSUMS:
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
 
-PODFILE CHECKSUM: 78f2d4690ac3e381572e518eb0057b2b788f04cd
+PODFILE CHECKSUM: 72fb366898184fd37dccdace4a45b13080b40803
 
 COCOAPODS: 1.2.0
