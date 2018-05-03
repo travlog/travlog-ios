@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import MaterialComponents
 
 class ViewController: UIViewController {
+
+    @IBOutlet var inputEmail: MDCTextField!
+    @IBOutlet var inputPassword: MDCTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()

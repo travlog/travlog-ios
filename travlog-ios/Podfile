@@ -8,5 +8,5 @@ target 'travlog-ios' do
   # Pods for travlog-ios
 
   pod 'Alamofire', '~> 4.7'
-
+  pod 'MaterialComponents'
 end
