@@ -35,6 +35,9 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="로그인"/>
+                                <connections>
+                                    <action selector="signin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r0N-kM-KNW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aff-DY-n1E" customClass="MDCRaisedButton">
                                 <rect key="frame" x="16" y="228" width="343" height="30"/>
@@ -72,24 +75,22 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--회원가입-->
         <scene sceneID="YB0-5e-7SF">
             <objects>
-                <viewController id="aOG-o7-Wft" sceneMemberID="viewController">
+                <viewController id="aOG-o7-Wft" customClass="SignupController" customModule="travlog_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ree-gg-ZRZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Agy-Bt-EKr" customClass="MDCTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Agy-Bt-EKr" customClass="MDCTextField">
                                 <rect key="frame" x="16" y="100" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujA-HN-Yku" customClass="MDCRaisedButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujA-HN-Yku" customClass="MDCRaisedButton">
                                 <rect key="frame" x="16" y="160" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="다음"/>
@@ -99,44 +100,67 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ujA-HN-Yku" firstAttribute="top" secondItem="Agy-Bt-EKr" secondAttribute="bottom" constant="30" id="393-F3-6jT"/>
+                            <constraint firstItem="ujA-HN-Yku" firstAttribute="leading" secondItem="BaY-x7-lxs" secondAttribute="leading" constant="16" id="Xbl-oU-A7F"/>
+                            <constraint firstItem="Agy-Bt-EKr" firstAttribute="leading" secondItem="BaY-x7-lxs" secondAttribute="leading" constant="16" id="bls-hh-nXy"/>
+                            <constraint firstItem="BaY-x7-lxs" firstAttribute="trailing" secondItem="ujA-HN-Yku" secondAttribute="trailing" constant="16" id="hVe-bN-AJC"/>
+                            <constraint firstItem="BaY-x7-lxs" firstAttribute="trailing" secondItem="Agy-Bt-EKr" secondAttribute="trailing" constant="16" id="hym-3J-Kud"/>
+                            <constraint firstItem="Agy-Bt-EKr" firstAttribute="top" secondItem="BaY-x7-lxs" secondAttribute="top" constant="36" id="zip-XV-k5N"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BaY-x7-lxs"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ouR-nb-67S"/>
+                    <navigationItem key="navigationItem" title="회원가입" id="ouR-nb-67S">
+                        <barButtonItem key="backBarButtonItem" title="이메일 입력" id="UR7-BD-sus"/>
+                        <barButtonItem key="leftBarButtonItem" title="로그인" id="hOR-SA-KD4"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="inputEmail" destination="Agy-Bt-EKr" id="Pgv-EQ-gke"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etr-Q5-MFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1701.5999999999999" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--회원가입-->
         <scene sceneID="IMZ-y0-7kY">
             <objects>
-                <viewController id="N7T-6u-hjV" sceneMemberID="viewController">
+                <viewController id="N7T-6u-hjV" customClass="SignupResultController" customModule="travlog_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C31-kU-eS5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uRt-9a-L3R" customClass="MDCTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" 비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uRt-9a-L3R" customClass="MDCTextField">
                                 <rect key="frame" x="16" y="100" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiD-Qd-KNP" customClass="MDCRaisedButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiD-Qd-KNP" customClass="MDCRaisedButton">
                                 <rect key="frame" x="16" y="160" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="회원가입"/>
                                 <connections>
-                                    <segue destination="N7T-6u-hjV" kind="custom" customClass="DismisseSeque" customModule="travlog_ios" customModuleProvider="target" id="8Aq-jt-s6Q"/>
+                                    <action selector="signupWithSender:" destination="N7T-6u-hjV" eventType="touchUpInside" id="wGV-uc-yGg"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uRt-9a-L3R" firstAttribute="top" secondItem="wOY-Ku-zA5" secondAttribute="top" constant="36" id="LKc-0x-aaP"/>
+                            <constraint firstItem="kiD-Qd-KNP" firstAttribute="leading" secondItem="wOY-Ku-zA5" secondAttribute="leading" constant="16" id="fWe-zd-rNp"/>
+                            <constraint firstItem="uRt-9a-L3R" firstAttribute="leading" secondItem="wOY-Ku-zA5" secondAttribute="leading" constant="16" id="kUz-xt-9qZ"/>
+                            <constraint firstItem="wOY-Ku-zA5" firstAttribute="trailing" secondItem="uRt-9a-L3R" secondAttribute="trailing" constant="16" id="pPO-b1-9mY"/>
+                            <constraint firstItem="wOY-Ku-zA5" firstAttribute="trailing" secondItem="kiD-Qd-KNP" secondAttribute="trailing" constant="16" id="rmK-9r-kww"/>
+                            <constraint firstItem="kiD-Qd-KNP" firstAttribute="top" secondItem="uRt-9a-L3R" secondAttribute="bottom" constant="30" id="t2v-mJ-WQw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wOY-Ku-zA5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lDO-cr-fox"/>
+                    <navigationItem key="navigationItem" title="회원가입" id="lDO-cr-fox"/>
+                    <connections>
+                        <outlet property="inputPassword" destination="uRt-9a-L3R" id="c1r-BK-bZ5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSS-7D-qqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,6 +177,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="navigationBar" destination="RgE-DN-sk0" id="T5O-II-0qG"/>
                         <segue destination="aOG-o7-Wft" kind="relationship" relationship="rootViewController" id="iMl-yF-xDf"/>
                     </connections>
                 </navigationController>

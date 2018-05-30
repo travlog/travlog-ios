@@ -11,8 +11,15 @@ import MaterialComponents
 
 class SignupController: UIViewController {
 
+    let appBar = MDCAppBar()
+    @IBOutlet var inputEmail:UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? SignupResultController {
+            vc.email = self.inputEmail.text!
+        }
     }
 }

@@ -10,6 +10,31 @@ import Foundation
 import Alamofire
 
 class Service {
-    class func request (type: String, url: String) {
-    }
+//    var url: String
+//    var method = Alamofire.HTTPMethod.get
+//    var params:[String:AnyObject]?
+//
+//    init () {
+//
+//    }
+//    func request(_ url: String) -> Self {
+//        self.url = url
+//        return self
+//    }
+//
+//    func method(_ method: Alamofire.HTTPMethod) -> Self {
+//        self.method = method
+//        return self
+//    }
+//
+//    func data(_ data: [String:AnyObject]) -> Self {
+//        self.params = data
+//        return self
+//    }
+//
+//    func response(response:@escaping([String:AnyObject])) -> Void {
+//        return response([
+//            hello: "world"
+//        ])
+//    }
 }
