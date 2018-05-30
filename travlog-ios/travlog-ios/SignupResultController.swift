@@ -19,7 +19,7 @@ class SignupResultController: UIViewController {
         print(self.email!)
     }
     
-    @IBAction func signup (sender: Any?) {
+    @IBAction func signup (_ sender: Any?) {
         let alert = UIAlertController(title: "Submit", message: "success signup", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ok", style: .default, handler: { (action) in
             self.signupService()

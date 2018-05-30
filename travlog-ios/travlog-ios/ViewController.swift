@@ -26,19 +26,26 @@ class ViewController: UIViewController {
     }
 
     @IBAction func signin(_ sender: Any) {
-//        Api().signin(userId: "i@jincode.me", password: "1023").response { response in
-//            debugPrint(response)
-//        }
-//        Api.signin(userId: "hello", password: "world").response { response in
-//            print(response)
-//        }
-
-//        Api().test().result{ value in
-//            print(value)
-//        }
-
-        Alamofire.request("https://deposit.tabling.co.kr/api/phones", method: .get).responseJSON { response in
-            print(response)
+        let params = [
+            "loginId": self.inputEmail.text!,
+            "password": self.inputPassword.text!
+        ]
+        Alamofire.request("http://fobid.synology.me:3000/api/signin", method: .post, parameters:params, encoding:URLEncoding.default).responseJSON { response in
+            var message = "login error"
+            if let data = response.result.value as? Dictionary<String, Any> {
+                if let codeno:Int = data["codeno"] as? Int {
+                    switch codeno {
+                    case 2000:
+                        message = "login success"
+                    default:
+                        break
+                    }
+                }
+            }
+            
+            let alert = UIAlertController(title: "login", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true)
         }
     }
 
