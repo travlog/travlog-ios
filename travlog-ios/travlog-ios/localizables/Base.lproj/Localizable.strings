@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  travlog-ios
+
+  Created by jin on 2018. 6. 2..
+  Copyright © 2018년 travlog. All rights reserved.
+*/
+
+"ERROR" = "오류";
+"SIGNIN" = "로그인";
+"CANCEL" = "취소";
+"OK" = "확인";
+"NO" = "아니요";
+"NEXT" = "다음";
+"SIGNIN_ERROR_MESSAGE" = "로그인에 실패했습니다";
+"SIGNUP_ERROR_MESSAGE" = "오류로 인해 회원가입에 실패했습니다.";

@@ -9,6 +9,7 @@
 import UIKit
 import MaterialComponents
 import Alamofire
+import SCLAlertView
 
 class ViewController: UIViewController {
 
@@ -31,21 +32,24 @@ class ViewController: UIViewController {
             "password": self.inputPassword.text!
         ]
         Alamofire.request("http://fobid.synology.me:3000/api/signin", method: .post, parameters:params, encoding:URLEncoding.default).responseJSON { response in
-            var message = "login error"
             if let data = response.result.value as? Dictionary<String, Any> {
                 if let codeno:Int = data["codeno"] as? Int {
                     switch codeno {
                     case 2000:
-                        message = "login success"
+                        let vc:UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+                        self.present(vc, animated: true, completion: nil)
+                        return
                     default:
                         break
                     }
                 }
             }
+            SCLAlertView().showError(LString.signin, subTitle: LString.signin_error_message)
             
-            let alert = UIAlertController(title: "login", message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true)
+//            let alert = UIAlertController(title: "SIGNIN".localized, message: message, preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "OK".localized, style: UIAlertActionStyle.default, handler: nil))
+//            self.present(alert, animated: true)
+            
         }
     }
 

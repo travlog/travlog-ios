@@ -1,0 +1,36 @@
+
+/* Class = "UIButton"; normalTitle = "회원가입"; ObjectID = "Aff-DY-n1E"; */
+"Aff-DY-n1E.normalTitle" = "회원가입";
+
+/* Class = "UITextField"; placeholder = "이메일 입력"; ObjectID = "Agy-Bt-EKr"; */
+"Agy-Bt-EKr.placeholder" = "이메일 입력";
+
+/* Class = "UIBarButtonItem"; title = "이메일 입력"; ObjectID = "UR7-BD-sus"; */
+"UR7-BD-sus.title" = "이메일 입력";
+
+/* Class = "UITextField"; placeholder = "비밀번호를 입력하세요"; ObjectID = "UaY-bJ-yud"; */
+"UaY-bJ-yud.placeholder" = "비밀번호를 입력하세요";
+
+/* Class = "UIBarButtonItem"; title = "로그인"; ObjectID = "hOR-SA-KD4"; */
+"hOR-SA-KD4.title" = "로그인";
+
+/* Class = "UIButton"; normalTitle = "로그인"; ObjectID = "kau-KR-dWV"; */
+"kau-KR-dWV.normalTitle" = "로그인";
+
+/* Class = "UIButton"; normalTitle = "회원가입"; ObjectID = "kiD-Qd-KNP"; */
+"kiD-Qd-KNP.normalTitle" = "회원가입";
+
+/* Class = "UINavigationItem"; title = "회원가입"; ObjectID = "lDO-cr-fox"; */
+"lDO-cr-fox.title" = "회원가입";
+
+/* Class = "UINavigationItem"; title = "회원가입"; ObjectID = "ouR-nb-67S"; */
+"ouR-nb-67S.title" = "회원가입";
+
+/* Class = "UITextField"; placeholder = " 비밀번호"; ObjectID = "uRt-9a-L3R"; */
+"uRt-9a-L3R.placeholder" = " 비밀번호";
+
+/* Class = "UIButton"; normalTitle = "다음"; ObjectID = "ujA-HN-Yku"; */
+"ujA-HN-Yku.normalTitle" = "다음";
+
+/* Class = "UITextField"; placeholder = "이메일을 입력하세요"; ObjectID = "xEX-bC-C4k"; */
+"xEX-bC-C4k.placeholder" = "이메일을 입력하세요";
