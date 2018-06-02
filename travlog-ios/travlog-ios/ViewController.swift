@@ -31,11 +31,16 @@ class ViewController: UIViewController {
             "loginId": self.inputEmail.text!,
             "password": self.inputPassword.text!
         ]
+        let appearance = SCLAlertView.SCLAppearance(
+            showCloseButton: false
+        )
+        let alert: SCLAlertViewResponder = SCLAlertView(appearance: appearance).showWait("로그인", subTitle: "로그인중입니다")
         Alamofire.request("http://fobid.synology.me:3000/api/signin", method: .post, parameters:params, encoding:URLEncoding.default).responseJSON { response in
             if let data = response.result.value as? Dictionary<String, Any> {
                 if let codeno:Int = data["codeno"] as? Int {
                     switch codeno {
                     case 2000:
+                        alert.close()
                         let vc:UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
                         self.present(vc, animated: true, completion: nil)
                         return
@@ -44,14 +49,10 @@ class ViewController: UIViewController {
                     }
                 }
             }
-//            let alertView = SCLAlertView()
-//            alertView.addButton(LString.ok, action: {})
-//            alertView.showSuccess(LString.signin, subTitle: LString.signin_error_message)
-            SCLAlertView().showTitle(LString.signin_error_message, subTitle: LString.signin, style: .error, closeButtonTitle: LString.ok)
-            
-//            let alert = UIAlertController(title: "SIGNIN".localized, message: message, preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "OK".localized, style: UIAlertActionStyle.default, handler: nil))
-//            self.present(alert, animated: true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8, execute: {
+                alert.close()
+                SCLAlertView().showTitle(LString.signin_error_message, subTitle: LString.signin, style: .error, closeButtonTitle: LString.ok)
+            })
             
         }
     }
