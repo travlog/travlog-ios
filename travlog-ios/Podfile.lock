@@ -470,12 +470,14 @@ PODS:
     - MotionInterchange (~> 1.6)
   - MotionInterchange (1.6.0)
   - MotionTransitioning (5.0.0)
+  - SCLAlertView (0.8)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - Crashlytics
   - Fabric
   - MaterialComponents
+  - SCLAlertView
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -487,7 +489,8 @@ SPEC CHECKSUMS:
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
 
-PODFILE CHECKSUM: 72fb366898184fd37dccdace4a45b13080b40803
+PODFILE CHECKSUM: 2dd97e283bf3914c2370124662e5d7789bacf547
 
 COCOAPODS: 1.2.0

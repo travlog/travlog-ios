@@ -11,4 +11,5 @@ target 'travlog-ios' do
   pod 'MaterialComponents'
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'SCLAlertView'
 end
