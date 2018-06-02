@@ -9,6 +9,12 @@
 import UIKit
 import Fabric
 import Crashlytics
+import ReSwift
+
+let store = Store<AppState>(
+    reducer: AppReducer,
+    state: nil
+)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

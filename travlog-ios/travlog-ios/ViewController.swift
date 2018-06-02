@@ -10,8 +10,11 @@ import UIKit
 import MaterialComponents
 import Alamofire
 import SCLAlertView
+import ReSwift
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, StoreSubscriber {
+    
+    typealias StoreSubscriberStateType = AppState
 
     @IBOutlet var inputEmail: MDCTextField!
     @IBOutlet var inputPassword: MDCTextField!
@@ -19,11 +22,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        store.subscribe(self)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func newState(state: AppState) {
+        print("newState")
+        print("\(state.name), \(state.username), \(state.userId)")
     }
 
     @IBAction func signin(_ sender: Any) {
@@ -41,6 +50,15 @@ class ViewController: UIViewController {
                     switch codeno {
                     case 2000:
                         alert.close()
+                        // TODO: store 갱신하기
+//                        let result = data["data"] as! Dictionary<String, Any>
+//                        let user = result["user"] as! Dictionary<String, Any>
+//                        print("userId: \(user["userId"]!.toInt())")
+//                        store.dispatch(FetchUser(
+//                            name: (user["name"] as? String) ?? "",
+//                            username: (user["username"] as? String) ?? "",
+//                            userId: (user["userId"] as? Int) ?? -1
+//                        ))
                         let vc:UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
                         self.present(vc, animated: true, completion: nil)
                         return
