@@ -31,19 +31,35 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kau-KR-dWV" customClass="MDCRaisedButton">
-                                <rect key="frame" x="16" y="182" width="343" height="30"/>
+                                <rect key="frame" x="16" y="182" width="343" height="49"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="vnV-Q8-eOs"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="로그인"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="byB-3T-CZL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aff-DY-n1E" customClass="MDCRaisedButton">
-                                <rect key="frame" x="16" y="228" width="343" height="30"/>
+                                <rect key="frame" x="16" y="239" width="343" height="49"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="7ja-En-lVk"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="회원가입"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="dP5-SL-uVw" kind="presentation" modalTransitionStyle="flipHorizontal" id="kbn-Qd-CTV"/>
                                 </connections>
@@ -52,7 +68,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UaY-bJ-yud" secondAttribute="trailing" constant="16" id="3KR-Aa-Tu0"/>
-                            <constraint firstItem="Aff-DY-n1E" firstAttribute="top" secondItem="kau-KR-dWV" secondAttribute="bottom" constant="16" id="HcI-WU-Evv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aff-DY-n1E" secondAttribute="trailing" constant="16" id="LeB-Ev-m6W"/>
                             <constraint firstItem="xEX-bC-C4k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="M3i-d1-MiV"/>
                             <constraint firstItem="xEX-bC-C4k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Qgn-gg-31U"/>
@@ -63,6 +78,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xEX-bC-C4k" secondAttribute="trailing" constant="16" id="fkR-pM-6uk"/>
                             <constraint firstItem="kau-KR-dWV" firstAttribute="top" secondItem="UaY-bJ-yud" secondAttribute="bottom" constant="28" id="pfG-0h-mvA"/>
                             <constraint firstItem="UaY-bJ-yud" firstAttribute="top" secondItem="xEX-bC-C4k" secondAttribute="bottom" constant="17" id="qpO-eJ-D5D"/>
+                            <constraint firstItem="Aff-DY-n1E" firstAttribute="top" secondItem="kau-KR-dWV" secondAttribute="bottom" constant="8" id="rZ0-rX-fYI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -80,20 +96,28 @@
             <objects>
                 <viewController id="aOG-o7-Wft" customClass="SignupController" customModule="travlog_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ree-gg-ZRZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Agy-Bt-EKr" customClass="MDCTextField">
-                                <rect key="frame" x="16" y="100" width="343" height="30"/>
+                                <rect key="frame" x="16" y="36" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujA-HN-Yku" customClass="MDCRaisedButton">
-                                <rect key="frame" x="16" y="160" width="343" height="30"/>
+                                <rect key="frame" x="16" y="96" width="343" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="UwV-70-a4i"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="다음"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="N7T-6u-hjV" kind="show" id="duA-Tr-kdj"/>
                                 </connections>
@@ -127,20 +151,28 @@
             <objects>
                 <viewController id="N7T-6u-hjV" customClass="SignupResultController" customModule="travlog_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C31-kU-eS5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" 비밀번호를 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uRt-9a-L3R" customClass="MDCTextField">
-                                <rect key="frame" x="16" y="100" width="343" height="30"/>
+                                <rect key="frame" x="16" y="36" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiD-Qd-KNP" customClass="MDCRaisedButton">
-                                <rect key="frame" x="16" y="160" width="343" height="30"/>
+                                <rect key="frame" x="16" y="96" width="343" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="mzX-G3-aCe"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="회원가입"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signup:" destination="N7T-6u-hjV" eventType="touchUpInside" id="tf2-Rj-lCb"/>
                                 </connections>
@@ -171,9 +203,12 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dP5-SL-uVw" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RgE-DN-sk0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="RgE-DN-sk0">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.31132118990000002" green="0.34663181030000001" blue="0.40598688469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -185,26 +220,59 @@
             </objects>
             <point key="canvasLocation" x="879" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="B0l-MR-GNL">
             <objects>
-                <viewController id="iDD-49-OsP" sceneMemberID="viewController">
+                <viewController id="iDD-49-OsP" customClass="MainViewController" customModule="travlog_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1D7-G6-kc7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feO-5S-Lk1" customClass="MDCRaisedButton">
-                                <rect key="frame" x="146" y="326" width="82" height="30"/>
+                                <rect key="frame" x="16" y="490" width="343" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="OhH-fR-pLv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="여행 작성하기"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="5e4-Bg-KFA" kind="show" id="hbq-0a-wu9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRAVLOG" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0u-GE-6a7">
+                                <rect key="frame" x="16" y="57" width="155" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="KmK-7F-6eq"/>
+                                    <constraint firstAttribute="height" constant="45" id="TfU-hl-4d1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행준비와 과정을 도와드릴께요 : )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU2-ee-QzV">
+                                <rect key="frame" x="16" y="118" width="234.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="sU2-ee-QzV" firstAttribute="leading" secondItem="MUp-dT-veV" secondAttribute="leading" constant="16" id="6E3-Wf-k7I"/>
+                            <constraint firstItem="U0u-GE-6a7" firstAttribute="leading" secondItem="MUp-dT-veV" secondAttribute="leading" constant="16" id="LY6-p8-7Eq"/>
+                            <constraint firstItem="U0u-GE-6a7" firstAttribute="top" secondItem="MUp-dT-veV" secondAttribute="top" constant="57" id="Mjx-fT-gre"/>
+                            <constraint firstItem="MUp-dT-veV" firstAttribute="trailing" secondItem="feO-5S-Lk1" secondAttribute="trailing" constant="16" id="WZA-2N-Y5S"/>
+                            <constraint firstItem="sU2-ee-QzV" firstAttribute="top" secondItem="U0u-GE-6a7" secondAttribute="bottom" constant="16" id="XY0-SN-bhX"/>
                             <constraint firstItem="feO-5S-Lk1" firstAttribute="centerX" secondItem="MUp-dT-veV" secondAttribute="centerX" id="ajz-aR-zsQ"/>
-                            <constraint firstItem="feO-5S-Lk1" firstAttribute="centerY" secondItem="MUp-dT-veV" secondAttribute="centerY" id="wIb-lQ-kLg"/>
+                            <constraint firstItem="MUp-dT-veV" firstAttribute="bottom" secondItem="feO-5S-Lk1" secondAttribute="bottom" constant="15" id="ccW-se-W8R"/>
+                            <constraint firstItem="feO-5S-Lk1" firstAttribute="leading" secondItem="MUp-dT-veV" secondAttribute="leading" constant="16" id="ych-et-8PB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MUp-dT-veV"/>
                     </view>
@@ -212,18 +280,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWt-le-Qj2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1940" y="941"/>
+            <point key="canvasLocation" x="1940" y="940.47976011994012"/>
         </scene>
-        <!--View Controller-->
+        <!--여행 작성하기-->
         <scene sceneID="4Wl-wj-Yq1">
             <objects>
                 <viewController id="5e4-Bg-KFA" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IEy-7x-FKA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ZAB-tx-nYD"/>
                     </view>
+                    <navigationItem key="navigationItem" title="여행 작성하기" id="cQc-Bo-pah">
+                        <barButtonItem key="backBarButtonItem" title="이전" id="KWC-ZT-cbX"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBk-cK-vzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,15 +318,17 @@
             </objects>
             <point key="canvasLocation" x="424" y="941.82908545727139"/>
         </scene>
-        <!--Item-->
+        <!--TRAVLOG-->
         <scene sceneID="SIu-MR-03S">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PCW-uN-Ilg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bkn-fL-0DC"/>
+                    <tabBarItem key="tabBarItem" title="TRAVLOG" id="bkn-fL-0DC"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Krz-fR-NPm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Krz-fR-NPm">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.31132118990000002" green="0.34663181030000001" blue="0.40598688469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

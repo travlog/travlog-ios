@@ -34,7 +34,6 @@ class SignupResultController: UIViewController {
             "password": inputPassword.text!
         ]
         Alamofire.request("http://fobid.synology.me:3000/api/signup", method: .post, parameters: params, encoding: URLEncoding.default).responseJSON { (response) in
-            print(response)
             self.dismissView()
         }
     }
