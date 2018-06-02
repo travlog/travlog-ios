@@ -12,4 +12,6 @@ struct LString {
     static let signin:String = "SIGNIN".localized
     static let signin_error_message:String = "SIGNIN_ERROR_MESSAGE".localized
     static let ok:String = "OK".localized
+    static let signup:String = "SIGNUP".localized
+    static let signup_success:String = "SIGNUP_SUCCESS".localized
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SCLAlertView
 
 class SignupResultController: UIViewController {
     
@@ -20,11 +21,11 @@ class SignupResultController: UIViewController {
     }
     
     @IBAction func signup (_ sender: Any?) {
-        let alert = UIAlertController(title: "Submit", message: "success signup", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "ok", style: .default, handler: { (action) in
+        let alertView = SCLAlertView()
+        alertView.addButton(LString.ok) {
             self.signupService()
-        }))
-        self.present(alert, animated: true)
+        }
+        SCLAlertView().showTitle(LString.signup_success, subTitle: LString.signup, style: .success, closeButtonTitle: LString.ok)
     }
     
     func signupService () {

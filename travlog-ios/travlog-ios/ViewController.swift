@@ -44,7 +44,10 @@ class ViewController: UIViewController {
                     }
                 }
             }
-            SCLAlertView().showError(LString.signin, subTitle: LString.signin_error_message)
+//            let alertView = SCLAlertView()
+//            alertView.addButton(LString.ok, action: {})
+//            alertView.showSuccess(LString.signin, subTitle: LString.signin_error_message)
+            SCLAlertView().showTitle(LString.signin_error_message, subTitle: LString.signin, style: .error, closeButtonTitle: LString.ok)
             
 //            let alert = UIAlertController(title: "SIGNIN".localized, message: message, preferredStyle: .alert)
 //            alert.addAction(UIAlertAction(title: "OK".localized, style: UIAlertActionStyle.default, handler: nil))

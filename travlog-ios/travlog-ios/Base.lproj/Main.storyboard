@@ -193,9 +193,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feO-5S-Lk1">
-                                <rect key="frame" x="164" y="326" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feO-5S-Lk1" customClass="MDCRaisedButton">
+                                <rect key="frame" x="146" y="326" width="82" height="30"/>
+                                <state key="normal" title="여행 작성하기"/>
                                 <connections>
                                     <segue destination="5e4-Bg-KFA" kind="show" id="hbq-0a-wu9"/>
                                 </connections>

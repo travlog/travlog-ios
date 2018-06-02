@@ -8,6 +8,8 @@
 
 "ERROR" = "오류";
 "SIGNIN" = "로그인";
+"SIGNUP" = "회원가입";
+"SIGNUP_SUCCESS" = "회원가입 완료";
 "CANCEL" = "취소";
 "OK" = "확인";
 "NO" = "아니요";
