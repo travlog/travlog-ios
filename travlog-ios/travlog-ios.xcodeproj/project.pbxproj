@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19B0F6D0D74B256E708954AA /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0FC0B0FDF7C624A21AA4D /* Api.swift */; };
+		19B0FDF5D528EB7990D243F0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 19B0F73BBF9623323DEB5FE6 /* .gitignore */; };
+		3C6F560B20C276AF0054BCF8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F560A20C276AF0054BCF8 /* StringExtension.swift */; };
+		3C6F561020C277930054BCF8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C6F561220C277930054BCF8 /* Localizable.strings */; };
+		3C6F561620C27AED0054BCF8 /* LString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F561520C27AED0054BCF8 /* LString.swift */; };
+		3C73810F209B56F700B2F8A7 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C73810E209B56F700B2F8A7 /* SignupController.swift */; };
+		3C738111209B60C900B2F8A7 /* SignupResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C738110209B60C900B2F8A7 /* SignupResultController.swift */; };
+		3CA0EACB20977C5700650B9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA0EACA20977C5700650B9D /* AppDelegate.swift */; };
+		3CA0EACD20977C5700650B9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA0EACC20977C5700650B9D /* ViewController.swift */; };
+		3CA0EAD020977C5700650B9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CA0EACE20977C5700650B9D /* Main.storyboard */; };
+		3CA0EAD220977C5700650B9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA0EAD120977C5700650B9D /* Assets.xcassets */; };
+		3CA0EAD520977C5700650B9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CA0EAD320977C5700650B9D /* LaunchScreen.storyboard */; };
+		3CA0EADE20977D3600650B9D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA0EADD20977D3600650B9D /* Service.swift */; };
+		3CAE0E2620C2958300400F67 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE0E2520C2958300400F67 /* AppState.swift */; };
+		3CAE0E2820C2959B00400F67 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE0E2720C2959B00400F67 /* AppReducer.swift */; };
+		3CAE0E2A20C295C100400F67 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE0E2920C295C100400F67 /* Actions.swift */; };
+		3CE3F1C820C2CE0E005E3405 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE3F1C720C2CE0E005E3405 /* MainViewController.swift */; };
+		A0D4C66C4C3290257B4E57DE /* Pods_travlog_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5443B3193C274920D954881 /* Pods_travlog_ios.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		19B0F73BBF9623323DEB5FE6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
+		19B0FC0B0FDF7C624A21AA4D /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		3C6F560720C275950054BCF8 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		3C6F560820C275950054BCF8 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3C6F560A20C276AF0054BCF8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		3C6F561120C277930054BCF8 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3C6F561420C278D10054BCF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3C6F561520C27AED0054BCF8 /* LString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LString.swift; sourceTree = "<group>"; };
+		3C73810E209B56F700B2F8A7 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		3C738110209B60C900B2F8A7 /* SignupResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResultController.swift; sourceTree = "<group>"; };
+		3CA0EAC720977C5700650B9D /* travlog-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "travlog-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CA0EACA20977C5700650B9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3CA0EACC20977C5700650B9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3CA0EACF20977C5700650B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3CA0EAD120977C5700650B9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CA0EAD420977C5700650B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3CA0EAD620977C5700650B9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CA0EADD20977D3600650B9D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		3CAE0E2520C2958300400F67 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		3CAE0E2720C2959B00400F67 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		3CAE0E2920C295C100400F67 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		3CE3F1C720C2CE0E005E3405 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D5443B3193C274920D954881 /* Pods_travlog_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_travlog_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED2BE465FFAAA8E5A059A75 /* Pods-travlog-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travlog-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-travlog-ios/Pods-travlog-ios.release.xcconfig"; sourceTree = "<group>"; };
+		E5582F5F5950B8A85D6D217C /* Pods-travlog-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travlog-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-travlog-ios/Pods-travlog-ios.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CA0EAC420977C5700650B9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D4C66C4C3290257B4E57DE /* Pods_travlog_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C6F560920C276980054BCF8 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C6F560A20C276AF0054BCF8 /* StringExtension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		3C6F561320C278380054BCF8 /* localizables */ = {
+			isa = PBXGroup;
+			children = (
+				3C6F561220C277930054BCF8 /* Localizable.strings */,
+				3C6F561520C27AED0054BCF8 /* LString.swift */,
+			);
+			path = localizables;
+			sourceTree = "<group>";
+		};
+		3CA0EABE20977C5700650B9D = {
+			isa = PBXGroup;
+			children = (
+				3CA0EAC920977C5700650B9D /* travlog-ios */,
+				3CA0EAC820977C5700650B9D /* Products */,
+				43A0F4ED47CFB4A61A0E1D11 /* Pods */,
+				9F21C831FC36EE8DEB4486BE /* Frameworks */,
+				19B0F73BBF9623323DEB5FE6 /* .gitignore */,
+			);
+			sourceTree = "<group>";
+		};
+		3CA0EAC820977C5700650B9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CA0EAC720977C5700650B9D /* travlog-ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CA0EAC920977C5700650B9D /* travlog-ios */ = {
+			isa = PBXGroup;
+			children = (
+				3CAE0E2420C2957400400F67 /* store */,
+				3C6F561320C278380054BCF8 /* localizables */,
+				3C6F560920C276980054BCF8 /* extensions */,
+				3CA0EADC20977CF800650B9D /* util */,
+				3CA0EACA20977C5700650B9D /* AppDelegate.swift */,
+				3CA0EACC20977C5700650B9D /* ViewController.swift */,
+				3CA0EACE20977C5700650B9D /* Main.storyboard */,
+				3CA0EAD120977C5700650B9D /* Assets.xcassets */,
+				3CA0EAD320977C5700650B9D /* LaunchScreen.storyboard */,
+				3CA0EAD620977C5700650B9D /* Info.plist */,
+				3C73810E209B56F700B2F8A7 /* SignupController.swift */,
+				3C738110209B60C900B2F8A7 /* SignupResultController.swift */,
+				3CE3F1C720C2CE0E005E3405 /* MainViewController.swift */,
+			);
+			path = "travlog-ios";
+			sourceTree = "<group>";
+		};
+		3CA0EADC20977CF800650B9D /* util */ = {
+			isa = PBXGroup;
+			children = (
+				3CA0EADD20977D3600650B9D /* Service.swift */,
+				19B0FC0B0FDF7C624A21AA4D /* Api.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		3CAE0E2420C2957400400F67 /* store */ = {
+			isa = PBXGroup;
+			children = (
+				3CAE0E2520C2958300400F67 /* AppState.swift */,
+				3CAE0E2720C2959B00400F67 /* AppReducer.swift */,
+				3CAE0E2920C295C100400F67 /* Actions.swift */,
+			);
+			path = store;
+			sourceTree = "<group>";
+		};
+		43A0F4ED47CFB4A61A0E1D11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5582F5F5950B8A85D6D217C /* Pods-travlog-ios.debug.xcconfig */,
+				DED2BE465FFAAA8E5A059A75 /* Pods-travlog-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9F21C831FC36EE8DEB4486BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5443B3193C274920D954881 /* Pods_travlog_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CA0EAC620977C5700650B9D /* travlog-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CA0EAD920977C5700650B9D /* Build configuration list for PBXNativeTarget "travlog-ios" */;
+			buildPhases = (
+				6047FDB878B5EF935D09456E /* [CP] Check Pods Manifest.lock */,
+				3CA0EAC320977C5700650B9D /* Sources */,
+				3CA0EAC420977C5700650B9D /* Frameworks */,
+				3CA0EAC520977C5700650B9D /* Resources */,
+				3D4BD1ED155EDC275705741C /* [CP] Embed Pods Frameworks */,
+				878580C4AA6FF9D1F8605594 /* [CP] Copy Pods Resources */,
+				3CCE60C0209B6BF0001D6E0D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "travlog-ios";
+			productName = "travlog-ios";
+			productReference = 3CA0EAC720977C5700650B9D /* travlog-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CA0EABF20977C5700650B9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = travlog;
+				TargetAttributes = {
+					3CA0EAC620977C5700650B9D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 3CA0EAC220977C5700650B9D /* Build configuration list for PBXProject "travlog-ios" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3CA0EABE20977C5700650B9D;
+			productRefGroup = 3CA0EAC820977C5700650B9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CA0EAC620977C5700650B9D /* travlog-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CA0EAC520977C5700650B9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C6F561020C277930054BCF8 /* Localizable.strings in Resources */,
+				3CA0EAD520977C5700650B9D /* LaunchScreen.storyboard in Resources */,
+				3CA0EAD220977C5700650B9D /* Assets.xcassets in Resources */,
+				3CA0EAD020977C5700650B9D /* Main.storyboard in Resources */,
+				19B0FDF5D528EB7990D243F0 /* .gitignore in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CCE60C0209B6BF0001D6E0D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 6ed90c2005dfd3578f74731cb9d1a3d0ced77214 6cab03631016e47bcef9cc26ebdcd29c2dc0a03c79b8d0bf49914425921178d5";
+		};
+		3D4BD1ED155EDC275705741C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-travlog-ios/Pods-travlog-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6047FDB878B5EF935D09456E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		878580C4AA6FF9D1F8605594 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-travlog-ios/Pods-travlog-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CA0EAC320977C5700650B9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CA0EACD20977C5700650B9D /* ViewController.swift in Sources */,
+				3C6F560B20C276AF0054BCF8 /* StringExtension.swift in Sources */,
+				3CA0EACB20977C5700650B9D /* AppDelegate.swift in Sources */,
+				3CE3F1C820C2CE0E005E3405 /* MainViewController.swift in Sources */,
+				3CA0EADE20977D3600650B9D /* Service.swift in Sources */,
+				3CAE0E2820C2959B00400F67 /* AppReducer.swift in Sources */,
+				3CAE0E2A20C295C100400F67 /* Actions.swift in Sources */,
+				3C73810F209B56F700B2F8A7 /* SignupController.swift in Sources */,
+				3CAE0E2620C2958300400F67 /* AppState.swift in Sources */,
+				3C738111209B60C900B2F8A7 /* SignupResultController.swift in Sources */,
+				19B0F6D0D74B256E708954AA /* Api.swift in Sources */,
+				3C6F561620C27AED0054BCF8 /* LString.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3C6F561220C277930054BCF8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C6F561120C277930054BCF8 /* ko */,
+				3C6F561420C278D10054BCF8 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		3CA0EACE20977C5700650B9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CA0EACF20977C5700650B9D /* Base */,
+				3C6F560720C275950054BCF8 /* ko */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3CA0EAD320977C5700650B9D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CA0EAD420977C5700650B9D /* Base */,
+				3C6F560820C275950054BCF8 /* ko */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3CA0EAD720977C5700650B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3CA0EAD820977C5700650B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3CA0EADA20977C5700650B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5582F5F5950B8A85D6D217C /* Pods-travlog-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = H4L46QP5X9;
+				INFOPLIST_FILE = "travlog-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "travlog.travlog-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ebc9da7b-778e-41b7-90d9-b6dc8ebae69b";
+				PROVISIONING_PROFILE_SPECIFIER = "travlog-ios";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CA0EADB20977C5700650B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DED2BE465FFAAA8E5A059A75 /* Pods-travlog-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = H4L46QP5X9;
+				INFOPLIST_FILE = "travlog-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "travlog.travlog-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ebc9da7b-778e-41b7-90d9-b6dc8ebae69b";
+				PROVISIONING_PROFILE_SPECIFIER = "travlog-ios";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CA0EAC220977C5700650B9D /* Build configuration list for PBXProject "travlog-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CA0EAD720977C5700650B9D /* Debug */,
+				3CA0EAD820977C5700650B9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CA0EAD920977C5700650B9D /* Build configuration list for PBXNativeTarget "travlog-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CA0EADA20977C5700650B9D /* Debug */,
+				3CA0EADB20977C5700650B9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CA0EABF20977C5700650B9D /* Project object */;
+}
