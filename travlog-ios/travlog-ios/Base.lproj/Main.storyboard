@@ -247,13 +247,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" 비밀번호를 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uRt-9a-L3R" customClass="MDCTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" 비밀번호를 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uRt-9a-L3R" customClass="MDCTextField">
                                 <rect key="frame" x="16" y="84" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiD-Qd-KNP" customClass="MDCRaisedButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiD-Qd-KNP" customClass="MDCRaisedButton">
                                 <rect key="frame" x="16" y="144" width="343" height="49"/>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.52156862749999999" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -284,6 +284,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mwd-KB-Rlk" firstAttribute="top" secondItem="wOY-Ku-zA5" secondAttribute="top" constant="20" id="0eB-ID-PJv"/>
+                            <constraint firstItem="uRt-9a-L3R" firstAttribute="top" secondItem="mwd-KB-Rlk" secondAttribute="bottom" constant="19" id="Qbl-DD-MeK"/>
                             <constraint firstItem="mwd-KB-Rlk" firstAttribute="leading" secondItem="wOY-Ku-zA5" secondAttribute="leading" constant="16" id="a6a-TL-qID"/>
                             <constraint firstItem="kiD-Qd-KNP" firstAttribute="leading" secondItem="wOY-Ku-zA5" secondAttribute="leading" constant="16" id="fWe-zd-rNp"/>
                             <constraint firstItem="uRt-9a-L3R" firstAttribute="leading" secondItem="wOY-Ku-zA5" secondAttribute="leading" constant="16" id="kUz-xt-9qZ"/>
