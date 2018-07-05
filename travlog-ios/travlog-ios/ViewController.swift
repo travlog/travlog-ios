@@ -30,6 +30,13 @@ class ViewController: UIViewController, StoreSubscriber {
         // Dispose of any resources that can be recreated.
     }
     
+    func showSignupView () {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignupNavigationController") as! UINavigationController
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    
     func newState(state: AppState) {
         print("newState")
         print("\(state.name), \(state.username), \(state.userId)")

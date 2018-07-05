@@ -17,6 +17,9 @@ class SignupController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    @IBAction func dismissView (_ sender: Any?) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? SignupResultController {
             vc.email = self.inputEmail.text!

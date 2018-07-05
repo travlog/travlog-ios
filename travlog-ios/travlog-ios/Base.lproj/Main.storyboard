@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Intro Controller-->
         <scene sceneID="0Sa-6c-D0g">
             <objects>
-                <viewController id="anc-d0-f2O" sceneMemberID="viewController">
+                <viewController id="anc-d0-f2O" customClass="IntroController" customModule="travlog_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bmq-xz-3RQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +33,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qEE-t9-8fs"/>
-                                    <segue destination="dP5-SL-uVw" kind="show" id="98y-eR-A8a"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="SignupSegue" id="9Kh-6O-Jds"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdj-Or-QQr">
@@ -229,7 +229,11 @@
                         <viewLayoutGuide key="safeArea" id="BaY-x7-lxs"/>
                     </view>
                     <navigationItem key="navigationItem" id="ouR-nb-67S">
-                        <barButtonItem key="leftBarButtonItem" title="로그인" id="hOR-SA-KD4"/>
+                        <barButtonItem key="leftBarButtonItem" title="로그인" id="hOR-SA-KD4">
+                            <connections>
+                                <action selector="dismissView:" destination="aOG-o7-Wft" id="VDZ-p4-e8i"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="inputEmail" destination="Agy-Bt-EKr" id="Pgv-EQ-gke"/>
@@ -306,7 +310,7 @@
         <!--Navigation Controller-->
         <scene sceneID="vcP-Yg-ztc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dP5-SL-uVw" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SignupNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="dP5-SL-uVw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="RgE-DN-sk0">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -333,24 +337,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feO-5S-Lk1" customClass="MDCRaisedButton">
-                                <rect key="frame" x="16" y="490" width="343" height="49"/>
-                                <color key="backgroundColor" red="0.32549019610000002" green="0.52156862749999999" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="OhH-fR-pLv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="여행 작성하기"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="5e4-Bg-KFA" kind="show" id="hbq-0a-wu9"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRAVLOG" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0u-GE-6a7">
                                 <rect key="frame" x="16" y="57" width="155" height="45"/>
                                 <constraints>
@@ -367,17 +353,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98d-1B-h5V" customClass="MDCBottomAppBarView">
+                                <rect key="frame" x="0.0" y="543" width="375" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="uK2-nI-tQg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MUp-dT-veV" firstAttribute="trailing" secondItem="98d-1B-h5V" secondAttribute="trailing" id="5ov-s3-NmL"/>
                             <constraint firstItem="sU2-ee-QzV" firstAttribute="leading" secondItem="MUp-dT-veV" secondAttribute="leading" constant="16" id="6E3-Wf-k7I"/>
                             <constraint firstItem="U0u-GE-6a7" firstAttribute="leading" secondItem="MUp-dT-veV" secondAttribute="leading" constant="16" id="LY6-p8-7Eq"/>
                             <constraint firstItem="U0u-GE-6a7" firstAttribute="top" secondItem="MUp-dT-veV" secondAttribute="top" constant="57" id="Mjx-fT-gre"/>
-                            <constraint firstItem="MUp-dT-veV" firstAttribute="trailing" secondItem="feO-5S-Lk1" secondAttribute="trailing" constant="16" id="WZA-2N-Y5S"/>
                             <constraint firstItem="sU2-ee-QzV" firstAttribute="top" secondItem="U0u-GE-6a7" secondAttribute="bottom" constant="16" id="XY0-SN-bhX"/>
-                            <constraint firstItem="feO-5S-Lk1" firstAttribute="centerX" secondItem="MUp-dT-veV" secondAttribute="centerX" id="ajz-aR-zsQ"/>
-                            <constraint firstItem="MUp-dT-veV" firstAttribute="bottom" secondItem="feO-5S-Lk1" secondAttribute="bottom" constant="15" id="ccW-se-W8R"/>
-                            <constraint firstItem="feO-5S-Lk1" firstAttribute="leading" secondItem="MUp-dT-veV" secondAttribute="leading" constant="16" id="ych-et-8PB"/>
+                            <constraint firstItem="98d-1B-h5V" firstAttribute="leading" secondItem="MUp-dT-veV" secondAttribute="leading" id="gik-oy-Zw2"/>
+                            <constraint firstItem="98d-1B-h5V" firstAttribute="bottom" secondItem="MUp-dT-veV" secondAttribute="bottom" id="jr2-iM-PuH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MUp-dT-veV"/>
                     </view>
@@ -392,7 +384,7 @@
             <objects>
                 <viewController id="5e4-Bg-KFA" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IEy-7x-FKA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ZAB-tx-nYD"/>
@@ -404,24 +396,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBk-cK-vzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2681" y="940"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="1em-cx-O6e">
-            <objects>
-                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="CWO-dy-yLo" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zej-ov-hla">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="PCW-uN-Ilg" kind="relationship" relationship="viewControllers" id="BTt-Cl-nEY"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MEu-Ga-09N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="424" y="941.82908545727139"/>
         </scene>
         <!--TRAVLOG-->
         <scene sceneID="SIu-MR-03S">
@@ -449,6 +423,6 @@
         <image name="launcher_icon.png" width="768" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="98y-eR-A8a"/>
+        <segue reference="9Kh-6O-Jds"/>
     </inferredMetricsTieBreakers>
 </document>
