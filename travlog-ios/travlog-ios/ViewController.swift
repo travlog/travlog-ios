@@ -43,43 +43,48 @@ class ViewController: UIViewController, StoreSubscriber {
     }
 
     @IBAction func signin(_ sender: Any) {
-        let params = [
-            "loginId": self.inputEmail.text!,
-            "password": self.inputPassword.text!
-        ]
-        let appearance = SCLAlertView.SCLAppearance(
-            showCloseButton: false
-        )
-        let alert: SCLAlertViewResponder = SCLAlertView(appearance: appearance).showWait("로그인", subTitle: "로그인중입니다")
-        Alamofire.request("http://fobid.synology.me:3000/api/signin", method: .post, parameters:params, encoding:URLEncoding.default).responseJSON { response in
-            if let data = response.result.value as? Dictionary<String, Any> {
-                if let codeno:Int = data["codeno"] as? Int {
-                    switch codeno {
-                    case 2000:
-                        alert.close()
-                        // TODO: store 갱신하기
-//                        let result = data["data"] as! Dictionary<String, Any>
-//                        let user = result["user"] as! Dictionary<String, Any>
-//                        print("userId: \(user["userId"]!.toInt())")
-//                        store.dispatch(FetchUser(
-//                            name: (user["name"] as? String) ?? "",
-//                            username: (user["username"] as? String) ?? "",
-//                            userId: (user["userId"] as? Int) ?? -1
-//                        ))
-                        let vc:UITabBarController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
-                        self.present(vc, animated: true, completion: nil)
-                        return
-                    default:
-                        break
-                    }
-                }
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8, execute: {
-                alert.close()
-                SCLAlertView().showTitle(LString.signin_error_message, subTitle: LString.signin, style: .error, closeButtonTitle: LString.ok)
-            })
-            
-        }
+        self.showMainView()
+//        let params = [
+//            "loginId": self.inputEmail.text!,
+//            "password": self.inputPassword.text!
+//        ]
+//        let appearance = SCLAlertView.SCLAppearance(
+//            showCloseButton: false
+//        )
+//        let alert: SCLAlertViewResponder = SCLAlertView(appearance: appearance).showWait("로그인", subTitle: "로그인중입니다")
+//        Alamofire.request("http://fobid.synology.me:3000/api/signin", method: .post, parameters:params, encoding:URLEncoding.default).responseJSON { response in
+//            if let data = response.result.value as? Dictionary<String, Any> {
+//                if let codeno:Int = data["codeno"] as? Int {
+//                    switch codeno {
+//                    case 2000:
+//                        alert.close()
+//                        // TODO: store 갱신하기
+////                        let result = data["data"] as! Dictionary<String, Any>
+////                        let user = result["user"] as! Dictionary<String, Any>
+////                        print("userId: \(user["userId"]!.toInt())")
+////                        store.dispatch(FetchUser(
+////                            name: (user["name"] as? String) ?? "",
+////                            username: (user["username"] as? String) ?? "",
+////                            userId: (user["userId"] as? Int) ?? -1
+////                        ))
+//                        self.showMainView()
+//                        return
+//                    default:
+//                        break
+//                    }
+//                }
+//            }
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8, execute: {
+//                alert.close()
+//                SCLAlertView().showTitle(LString.signin_error_message, subTitle: LString.signin, style: .error, closeButtonTitle: LString.ok)
+//            })
+//
+//        }
+    }
+    
+    func showMainView() {
+        let vc:UINavigationController = self.storyboard?.instantiateViewController(withIdentifier: "MainNavigationController") as! UINavigationController
+        self.present(vc, animated: true, completion: nil)
     }
 
 }

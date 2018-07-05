@@ -231,7 +231,7 @@
                     <navigationItem key="navigationItem" id="ouR-nb-67S">
                         <barButtonItem key="leftBarButtonItem" title="로그인" id="hOR-SA-KD4">
                             <connections>
-                                <action selector="dismissView:" destination="aOG-o7-Wft" id="VDZ-p4-e8i"/>
+                                <action selector="dismissView:" destination="aOG-o7-Wft" id="9uF-Ik-ywK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -400,7 +400,7 @@
         <!--TRAVLOG-->
         <scene sceneID="SIu-MR-03S">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PCW-uN-Ilg" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="PCW-uN-Ilg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="TRAVLOG" id="bkn-fL-0DC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Krz-fR-NPm">
