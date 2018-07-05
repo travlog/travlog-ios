@@ -10,12 +10,12 @@
 		19B0F6D0D74B256E708954AA /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0FC0B0FDF7C624A21AA4D /* Api.swift */; };
 		19B0FDF5D528EB7990D243F0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 19B0F73BBF9623323DEB5FE6 /* .gitignore */; };
 		3C57A70E20EE66AF00FD93BC /* IntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A70D20EE66AF00FD93BC /* IntroController.swift */; };
+		3C57A71220EE6DC700FD93BC /* launcher_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C57A71120EE6DC600FD93BC /* launcher_icon.png */; };
 		3C6F560B20C276AF0054BCF8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F560A20C276AF0054BCF8 /* StringExtension.swift */; };
 		3C6F561020C277930054BCF8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C6F561220C277930054BCF8 /* Localizable.strings */; };
 		3C6F561620C27AED0054BCF8 /* LString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F561520C27AED0054BCF8 /* LString.swift */; };
 		3C73810F209B56F700B2F8A7 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C73810E209B56F700B2F8A7 /* SignupController.swift */; };
 		3C738111209B60C900B2F8A7 /* SignupResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C738110209B60C900B2F8A7 /* SignupResultController.swift */; };
-		3C9ED04320DD3DFE00CD6028 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 3C9ED04220DD3DFE00CD6028 /* images */; };
 		3CA0EACB20977C5700650B9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA0EACA20977C5700650B9D /* AppDelegate.swift */; };
 		3CA0EACD20977C5700650B9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA0EACC20977C5700650B9D /* ViewController.swift */; };
 		3CA0EAD020977C5700650B9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CA0EACE20977C5700650B9D /* Main.storyboard */; };
@@ -33,6 +33,7 @@
 		19B0F73BBF9623323DEB5FE6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		19B0FC0B0FDF7C624A21AA4D /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		3C57A70D20EE66AF00FD93BC /* IntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroController.swift; sourceTree = "<group>"; };
+		3C57A71120EE6DC600FD93BC /* launcher_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcher_icon.png; sourceTree = "<group>"; };
 		3C6F560720C275950054BCF8 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		3C6F560820C275950054BCF8 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		3C6F560A20C276AF0054BCF8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		3C6F561520C27AED0054BCF8 /* LString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LString.swift; sourceTree = "<group>"; };
 		3C73810E209B56F700B2F8A7 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
 		3C738110209B60C900B2F8A7 /* SignupResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResultController.swift; sourceTree = "<group>"; };
-		3C9ED04220DD3DFE00CD6028 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		3CA0EAC720977C5700650B9D /* travlog-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "travlog-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA0EACA20977C5700650B9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CA0EACC20977C5700650B9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +71,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C57A70F20EE6DC600FD93BC /* images */ = {
+			isa = PBXGroup;
+			children = (
+				3C57A71020EE6DC600FD93BC /* drawable-hdpi */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		3C57A71020EE6DC600FD93BC /* drawable-hdpi */ = {
+			isa = PBXGroup;
+			children = (
+				3C57A71120EE6DC600FD93BC /* launcher_icon.png */,
+			);
+			path = "drawable-hdpi";
+			sourceTree = "<group>";
+		};
 		3C6F560920C276980054BCF8 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +126,7 @@
 		3CA0EAC920977C5700650B9D /* travlog-ios */ = {
 			isa = PBXGroup;
 			children = (
-				3C9ED04220DD3DFE00CD6028 /* images */,
+				3C57A70F20EE6DC600FD93BC /* images */,
 				3CAE0E2420C2957400400F67 /* store */,
 				3C6F561320C278380054BCF8 /* localizables */,
 				3C6F560920C276980054BCF8 /* extensions */,
@@ -228,9 +244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C9ED04320DD3DFE00CD6028 /* images in Resources */,
 				3C6F561020C277930054BCF8 /* Localizable.strings in Resources */,
 				3CA0EAD520977C5700650B9D /* LaunchScreen.storyboard in Resources */,
+				3C57A71220EE6DC700FD93BC /* launcher_icon.png in Resources */,
 				3CA0EAD220977C5700650B9D /* Assets.xcassets in Resources */,
 				3CA0EAD020977C5700650B9D /* Main.storyboard in Resources */,
 				19B0FDF5D528EB7990D243F0 /* .gitignore in Resources */,
