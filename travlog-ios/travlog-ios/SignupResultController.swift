@@ -21,11 +21,13 @@ class SignupResultController: UIViewController {
     }
     
     @IBAction func signup (_ sender: Any?) {
-        let alertView = SCLAlertView()
+        let alertView = SCLAlertView(appearance: SCLAlertView.SCLAppearance(
+            showCloseButton: false
+        ))
         alertView.addButton(LString.ok) {
             self.signupService()
         }
-        SCLAlertView().showTitle(LString.signup_success, subTitle: LString.signup, style: .success, closeButtonTitle: LString.ok)
+        alertView.showTitle(LString.signup_success, subTitle: LString.signup, style: .success)
     }
     
     func signupService () {
