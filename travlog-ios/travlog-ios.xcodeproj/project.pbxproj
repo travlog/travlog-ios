@@ -26,6 +26,7 @@
 		3CAE0E2820C2959B00400F67 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE0E2720C2959B00400F67 /* AppReducer.swift */; };
 		3CAE0E2A20C295C100400F67 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAE0E2920C295C100400F67 /* Actions.swift */; };
 		3CE3F1C820C2CE0E005E3405 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE3F1C720C2CE0E005E3405 /* MainViewController.swift */; };
+		84F34D1420F2508E00B7BD7F /* Constants_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F34D1320F2508E00B7BD7F /* Constants_API.swift */; };
 		A0D4C66C4C3290257B4E57DE /* Pods_travlog_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5443B3193C274920D954881 /* Pods_travlog_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		3CAE0E2720C2959B00400F67 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		3CAE0E2920C295C100400F67 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		3CE3F1C720C2CE0E005E3405 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		84F34D1320F2508E00B7BD7F /* Constants_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants_API.swift; sourceTree = "<group>"; };
 		D5443B3193C274920D954881 /* Pods_travlog_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_travlog_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED2BE465FFAAA8E5A059A75 /* Pods-travlog-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travlog-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-travlog-ios/Pods-travlog-ios.release.xcconfig"; sourceTree = "<group>"; };
 		E5582F5F5950B8A85D6D217C /* Pods-travlog-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travlog-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-travlog-ios/Pods-travlog-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		3CA0EAC920977C5700650B9D /* travlog-ios */ = {
 			isa = PBXGroup;
 			children = (
+				84F34D1220F24FDA00B7BD7F /* common */,
 				3C57A70F20EE6DC600FD93BC /* images */,
 				3CAE0E2420C2957400400F67 /* store */,
 				3C6F561320C278380054BCF8 /* localizables */,
@@ -171,6 +174,14 @@
 				DED2BE465FFAAA8E5A059A75 /* Pods-travlog-ios.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		84F34D1220F24FDA00B7BD7F /* common */ = {
+			isa = PBXGroup;
+			children = (
+				84F34D1320F2508E00B7BD7F /* Constants_API.swift */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 		9F21C831FC36EE8DEB4486BE /* Frameworks */ = {
@@ -275,9 +286,42 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-travlog-ios/Pods-travlog-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -290,13 +334,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-travlog-ios-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		878580C4AA6FF9D1F8605594 /* [CP] Copy Pods Resources */ = {
@@ -327,6 +374,7 @@
 				3CE3F1C820C2CE0E005E3405 /* MainViewController.swift in Sources */,
 				3CA0EADE20977D3600650B9D /* Service.swift in Sources */,
 				3CAE0E2820C2959B00400F67 /* AppReducer.swift in Sources */,
+				84F34D1420F2508E00B7BD7F /* Constants_API.swift in Sources */,
 				3CAE0E2A20C295C100400F67 /* Actions.swift in Sources */,
 				3C73810F209B56F700B2F8A7 /* SignupController.swift in Sources */,
 				3CAE0E2620C2958300400F67 /* AppState.swift in Sources */,

@@ -10,31 +10,41 @@ import Foundation
 import Alamofire
 
 class Service {
-//    var url: String
-//    var method = Alamofire.HTTPMethod.get
-//    var params:[String:AnyObject]?
-//
-//    init () {
-//
-//    }
-//    func request(_ url: String) -> Self {
-//        self.url = url
-//        return self
-//    }
-//
-//    func method(_ method: Alamofire.HTTPMethod) -> Self {
-//        self.method = method
-//        return self
-//    }
-//
-//    func data(_ data: [String:AnyObject]) -> Self {
-//        self.params = data
-//        return self
-//    }
-//
-//    func response(response:@escaping([String:AnyObject])) -> Void {
-//        return response([
-//            hello: "world"
-//        ])
-//    }
+    static var shared: Service = Service()
+    
+    let HOST = "http://13.125.111.118"
+    let PORT = "3000"
+    
+    var api: String!
+    var method = Alamofire.HTTPMethod.get
+    var params:[String: Any]?
+    
+    func api(_ api: String) -> Self {
+        self.api = api
+        return self
+    }
+
+    func method(_ method: Alamofire.HTTPMethod) -> Self {
+        self.method = method
+        return self
+    }
+
+    func params(_ data: [String: Any]) -> Self {
+        self.params = data
+        return self
+    }
+
+    func request(resultdata:@escaping(([String: Any]) -> Void)) {
+        
+        var makeURL = "\(HOST):\(PORT)"
+        makeURL += api
+        print(" makeURL : \(makeURL)")
+        
+        Alamofire.request(makeURL, method: self.method, parameters:self.params, encoding:URLEncoding.default).responseJSON { response in
+            if let data = response.result.value as? Dictionary<String, Any> {
+                resultdata(data)
+            }
+            
+        }
+    }
 }
