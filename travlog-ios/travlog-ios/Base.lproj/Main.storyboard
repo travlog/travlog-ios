@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="anc-d0-f2O">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PCW-uN-Ilg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -47,14 +47,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BN7-PB-Uhu">
-                                <rect key="frame" x="131" y="323" width="112" height="41"/>
+                                <rect key="frame" x="131.5" y="323" width="112" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="TRAVLOG">
                                     <color key="titleColor" red="0.027450980392156862" green="0.21568627450980393" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launcher_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="LCL-T9-cU6">
-                                <rect key="frame" x="95" y="119" width="184" height="178"/>
+                                <rect key="frame" x="95.5" y="119" width="184" height="178"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="178" id="SnD-GZ-Mmm"/>
                                     <constraint firstAttribute="width" constant="184" id="cpW-LV-8p0"/>
@@ -374,6 +374,9 @@
                         <viewLayoutGuide key="safeArea" id="MUp-dT-veV"/>
                     </view>
                     <navigationItem key="navigationItem" id="WJw-Rw-Nac"/>
+                    <connections>
+                        <outlet property="mBottomAppBarView" destination="98d-1B-h5V" id="c9m-Vu-5SV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWt-le-Qj2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -382,11 +385,32 @@
         <!--여행 작성하기-->
         <scene sceneID="4Wl-wj-Yq1">
             <objects>
-                <viewController id="5e4-Bg-KFA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CREATE_TRAVLOG_VC" id="5e4-Bg-KFA" customClass="CreateTravlogViewController" customModule="travlog_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IEy-7x-FKA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 여행 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohu-ZY-460">
+                                <rect key="frame" x="16" y="77" width="158" height="33.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="새 여행 타이틀을 알려주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWP-Mr-X5F" customClass="MDCTextField">
+                                <rect key="frame" x="16" y="129.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ohu-ZY-460" firstAttribute="top" secondItem="ZAB-tx-nYD" secondAttribute="top" constant="57" id="1Vd-RF-fkV"/>
+                            <constraint firstItem="dWP-Mr-X5F" firstAttribute="top" secondItem="Ohu-ZY-460" secondAttribute="bottom" constant="19" id="IGN-zm-Chn"/>
+                            <constraint firstItem="ZAB-tx-nYD" firstAttribute="trailing" secondItem="dWP-Mr-X5F" secondAttribute="trailing" constant="16" id="MR9-2a-3lq"/>
+                            <constraint firstItem="dWP-Mr-X5F" firstAttribute="leading" secondItem="ZAB-tx-nYD" secondAttribute="leading" constant="16" id="jrr-Jj-sJR"/>
+                            <constraint firstItem="Ohu-ZY-460" firstAttribute="leading" secondItem="ZAB-tx-nYD" secondAttribute="leading" constant="16" id="obw-Jh-e0X"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZAB-tx-nYD"/>
                     </view>
                     <navigationItem key="navigationItem" title="여행 작성하기" id="cQc-Bo-pah">
